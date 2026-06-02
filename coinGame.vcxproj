@@ -1,0 +1,19 @@
+﻿#pragma once
+
+#include <QMainWindow>
+#include "CoinGameBg.h"
+class chooseLevelScene  : public QMainWindow
+{
+	Q_OBJECT
+
+public:
+	chooseLevelScene(QWidget *parent=nullptr);
+	~chooseLevelScene();
+	void paintEvent(QPaintEvent*);
+	CoinGameBg* coinGameBg;
+	//写一个自定义的信号，告诉主场景返回
+signals:
+	void chooseScenenBack();
+
+};
+

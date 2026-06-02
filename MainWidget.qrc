@@ -1,0 +1,23 @@
+﻿#pragma once
+
+#include <QtWidgets/QMainWindow>
+#include "ui_MainWidget.h"
+#include "chooselevelscene.h"
+
+class MainWidget : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    MainWidget(QWidget *parent = nullptr);
+    ~MainWidget();
+
+    //重写paintEvent事件，画背景图
+    void paintEvent(QPaintEvent*);
+
+    chooseLevelScene* chooseScene = nullptr;
+
+private:
+    Ui::MainWidgetClass ui;
+};
+
